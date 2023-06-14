@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://web.cbr.ru/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://web.cbr.ru/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://web.cbr.ru/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="NewsInfoXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsInfoXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsInfoXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OmodInfoXML">
+        <s:complexType />
+      </s:element>
+      <s:element name="OmodInfoXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OmodInfoXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XVolXML">
+        <s:complexType />
+      </s:element>
+      <s:element name="XVolXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XVolXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MainInfoXML">
+        <s:complexType />
+      </s:element>
+      <s:element name="MainInfoXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MainInfoXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwapDynamicXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwapDynamicXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SwapDynamicXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwapDynamic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwapDynamicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SwapDynamicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepoDynamicXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepoDynamicXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepoDynamicXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepoDynamic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepoDynamicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepoDynamicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OstatDynamicXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OstatDynamicXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OstatDynamicXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OstatDynamic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OstatDynamicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OstatDynamicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DragMetDynamicXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DragMetDynamicXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DragMetDynamicXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DragMetDynamic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DragMetDynamicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DragMetDynamicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestDateTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLatestDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLatestDateTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLatestDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestDateTimeSeld">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLatestDateTimeSeldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLatestDateTimeSeldResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestDateSeld">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLatestDateSeldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestDateSeldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnumValutesXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Seld" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnumValutesXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnumValutesXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnumValutes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Seld" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnumValutesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnumValutesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursDynamicXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValutaCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursDynamicXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCursDynamicXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursDynamic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValutaCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursDynamicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCursDynamicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursOnDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="On_date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursOnDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCursOnDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeldCursOnDateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="On_date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeldCursOnDateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeldCursOnDateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeldCursOnDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="On_date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeldCursOnDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeldCursOnDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursOnDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="On_date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCursOnDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCursOnDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="NewsInfoXMLSoapIn">
+    <part name="parameters" element="s0:NewsInfoXML" />
+  </message>
+  <message name="NewsInfoXMLSoapOut">
+    <part name="parameters" element="s0:NewsInfoXMLResponse" />
+  </message>
+  <message name="OmodInfoXMLSoapIn">
+    <part name="parameters" element="s0:OmodInfoXML" />
+  </message>
+  <message name="OmodInfoXMLSoapOut">
+    <part name="parameters" element="s0:OmodInfoXMLResponse" />
+  </message>
+  <message name="XVolXMLSoapIn">
+    <part name="parameters" element="s0:XVolXML" />
+  </message>
+  <message name="XVolXMLSoapOut">
+    <part name="parameters" element="s0:XVolXMLResponse" />
+  </message>
+  <message name="MainInfoXMLSoapIn">
+    <part name="parameters" element="s0:MainInfoXML" />
+  </message>
+  <message name="MainInfoXMLSoapOut">
+    <part name="parameters" element="s0:MainInfoXMLResponse" />
+  </message>
+  <message name="NewsInfoSoapIn">
+    <part name="parameters" element="s0:NewsInfo" />
+  </message>
+  <message name="NewsInfoSoapOut">
+    <part name="parameters" element="s0:NewsInfoResponse" />
+  </message>
+  <message name="SwapDynamicXMLSoapIn">
+    <part name="parameters" element="s0:SwapDynamicXML" />
+  </message>
+  <message name="SwapDynamicXMLSoapOut">
+    <part name="parameters" element="s0:SwapDynamicXMLResponse" />
+  </message>
+  <message name="SwapDynamicSoapIn">
+    <part name="parameters" element="s0:SwapDynamic" />
+  </message>
+  <message name="SwapDynamicSoapOut">
+    <part name="parameters" element="s0:SwapDynamicResponse" />
+  </message>
+  <message name="DepoDynamicXMLSoapIn">
+    <part name="parameters" element="s0:DepoDynamicXML" />
+  </message>
+  <message name="DepoDynamicXMLSoapOut">
+    <part name="parameters" element="s0:DepoDynamicXMLResponse" />
+  </message>
+  <message name="DepoDynamicSoapIn">
+    <part name="parameters" element="s0:DepoDynamic" />
+  </message>
+  <message name="DepoDynamicSoapOut">
+    <part name="parameters" element="s0:DepoDynamicResponse" />
+  </message>
+  <message name="OstatDynamicXMLSoapIn">
+    <part name="parameters" element="s0:OstatDynamicXML" />
+  </message>
+  <message name="OstatDynamicXMLSoapOut">
+    <part name="parameters" element="s0:OstatDynamicXMLResponse" />
+  </message>
+  <message name="OstatDynamicSoapIn">
+    <part name="parameters" element="s0:OstatDynamic" />
+  </message>
+  <message name="OstatDynamicSoapOut">
+    <part name="parameters" element="s0:OstatDynamicResponse" />
+  </message>
+  <message name="DragMetDynamicXMLSoapIn">
+    <part name="parameters" element="s0:DragMetDynamicXML" />
+  </message>
+  <message name="DragMetDynamicXMLSoapOut">
+    <part name="parameters" element="s0:DragMetDynamicXMLResponse" />
+  </message>
+  <message name="DragMetDynamicSoapIn">
+    <part name="parameters" element="s0:DragMetDynamic" />
+  </message>
+  <message name="DragMetDynamicSoapOut">
+    <part name="parameters" element="s0:DragMetDynamicResponse" />
+  </message>
+  <message name="GetLatestDateTimeSoapIn">
+    <part name="parameters" element="s0:GetLatestDateTime" />
+  </message>
+  <message name="GetLatestDateTimeSoapOut">
+    <part name="parameters" element="s0:GetLatestDateTimeResponse" />
+  </message>
+  <message name="GetLatestDateSoapIn">
+    <part name="parameters" element="s0:GetLatestDate" />
+  </message>
+  <message name="GetLatestDateSoapOut">
+    <part name="parameters" element="s0:GetLatestDateResponse" />
+  </message>
+  <message name="GetLatestDateTimeSeldSoapIn">
+    <part name="parameters" element="s0:GetLatestDateTimeSeld" />
+  </message>
+  <message name="GetLatestDateTimeSeldSoapOut">
+    <part name="parameters" element="s0:GetLatestDateTimeSeldResponse" />
+  </message>
+  <message name="GetLatestDateSeldSoapIn">
+    <part name="parameters" element="s0:GetLatestDateSeld" />
+  </message>
+  <message name="GetLatestDateSeldSoapOut">
+    <part name="parameters" element="s0:GetLatestDateSeldResponse" />
+  </message>
+  <message name="EnumValutesXMLSoapIn">
+    <part name="parameters" element="s0:EnumValutesXML" />
+  </message>
+  <message name="EnumValutesXMLSoapOut">
+    <part name="parameters" element="s0:EnumValutesXMLResponse" />
+  </message>
+  <message name="EnumValutesSoapIn">
+    <part name="parameters" element="s0:EnumValutes" />
+  </message>
+  <message name="EnumValutesSoapOut">
+    <part name="parameters" element="s0:EnumValutesResponse" />
+  </message>
+  <message name="GetCursDynamicXMLSoapIn">
+    <part name="parameters" element="s0:GetCursDynamicXML" />
+  </message>
+  <message name="GetCursDynamicXMLSoapOut">
+    <part name="parameters" element="s0:GetCursDynamicXMLResponse" />
+  </message>
+  <message name="GetCursDynamicSoapIn">
+    <part name="parameters" element="s0:GetCursDynamic" />
+  </message>
+  <message name="GetCursDynamicSoapOut">
+    <part name="parameters" element="s0:GetCursDynamicResponse" />
+  </message>
+  <message name="GetCursOnDateXMLSoapIn">
+    <part name="parameters" element="s0:GetCursOnDateXML" />
+  </message>
+  <message name="GetCursOnDateXMLSoapOut">
+    <part name="parameters" element="s0:GetCursOnDateXMLResponse" />
+  </message>
+  <message name="GetSeldCursOnDateXMLSoapIn">
+    <part name="parameters" element="s0:GetSeldCursOnDateXML" />
+  </message>
+  <message name="GetSeldCursOnDateXMLSoapOut">
+    <part name="parameters" element="s0:GetSeldCursOnDateXMLResponse" />
+  </message>
+  <message name="GetSeldCursOnDateSoapIn">
+    <part name="parameters" element="s0:GetSeldCursOnDate" />
+  </message>
+  <message name="GetSeldCursOnDateSoapOut">
+    <part name="parameters" element="s0:GetSeldCursOnDateResponse" />
+  </message>
+  <message name="GetCursOnDateSoapIn">
+    <part name="parameters" element="s0:GetCursOnDate" />
+  </message>
+  <message name="GetCursOnDateSoapOut">
+    <part name="parameters" element="s0:GetCursOnDateResponse" />
+  </message>
+  <portType name="DailyInfoSoap">
+    <operation name="NewsInfoXML">
+      <documentation>Получение новостей сервера (XMLDocument)</documentation>
+      <input message="s0:NewsInfoXMLSoapIn" />
+      <output message="s0:NewsInfoXMLSoapOut" />
+    </operation>
+    <operation name="OmodInfoXML">
+      <documentation>Операции на открытом рынке (как XMLDocument)</documentation>
+      <input message="s0:OmodInfoXMLSoapIn" />
+      <output message="s0:OmodInfoXMLSoapOut" />
+    </operation>
+    <operation name="XVolXML">
+      <documentation>Операции Банка России на рынке государственных ценных бумаг по поручению Министерства финансов Российской Федерации (как XMLDocument)</documentation>
+      <input message="s0:XVolXMLSoapIn" />
+      <output message="s0:XVolXMLSoapOut" />
+    </operation>
+    <operation name="MainInfoXML">
+      <documentation>Получение основной информации - Ставка рефинансирования, золотовалютные резервы, денежная база, денежная масса (как XMLDocument)</documentation>
+      <input message="s0:MainInfoXMLSoapIn" />
+      <output message="s0:MainInfoXMLSoapOut" />
+    </operation>
+    <operation name="NewsInfo">
+      <documentation>Получение новостей сервера (DataSet)</documentation>
+      <input message="s0:NewsInfoSoapIn" />
+      <output message="s0:NewsInfoSoapOut" />
+    </operation>
+    <operation name="SwapDynamicXML">
+      <documentation>Валютный своп buy/sell overnight (XMLDocument)</documentation>
+      <input message="s0:SwapDynamicXMLSoapIn" />
+      <output message="s0:SwapDynamicXMLSoapOut" />
+    </operation>
+    <operation name="SwapDynamic">
+      <documentation>Валютный своп buy/sell overnight (DataSet)</documentation>
+      <input message="s0:SwapDynamicSoapIn" />
+      <output message="s0:SwapDynamicSoapOut" />
+    </operation>
+    <operation name="DepoDynamicXML">
+      <documentation>Динамики ставок привлечения средств по депозитным операциям (как xmlDocument</documentation>
+      <input message="s0:DepoDynamicXMLSoapIn" />
+      <output message="s0:DepoDynamicXMLSoapOut" />
+    </operation>
+    <operation name="DepoDynamic">
+      <documentation>Динамика ставок привлечения средств по депозитным операциям (DataSet) </documentation>
+      <input message="s0:DepoDynamicSoapIn" />
+      <output message="s0:DepoDynamicSoapOut" />
+    </operation>
+    <operation name="OstatDynamicXML">
+      <documentation>Динамики сведений об остатках средств на корреспондентских счетах кредитных организаций (XMLDocument).</documentation>
+      <input message="s0:OstatDynamicXMLSoapIn" />
+      <output message="s0:OstatDynamicXMLSoapOut" />
+    </operation>
+    <operation name="OstatDynamic">
+      <documentation>Динамики сведений об остатках средств на корреспондентских счетах кредитных организаций (DataSet)!</documentation>
+      <input message="s0:OstatDynamicSoapIn" />
+      <output message="s0:OstatDynamicSoapOut" />
+    </operation>
+    <operation name="DragMetDynamicXML">
+      <documentation>Динамика учетных цен драгоценных металлов (как XMLDocument)</documentation>
+      <input message="s0:DragMetDynamicXMLSoapIn" />
+      <output message="s0:DragMetDynamicXMLSoapOut" />
+    </operation>
+    <operation name="DragMetDynamic">
+      <documentation>Динамика учетных цен драгоценных металлов (DataSet)</documentation>
+      <input message="s0:DragMetDynamicSoapIn" />
+      <output message="s0:DragMetDynamicSoapOut" />
+    </operation>
+    <operation name="GetLatestDateTime">
+      <documentation>Последняя дата публикации курсов валют как DateTime (ежедневные валюты)</documentation>
+      <input message="s0:GetLatestDateTimeSoapIn" />
+      <output message="s0:GetLatestDateTimeSoapOut" />
+    </operation>
+    <operation name="GetLatestDate">
+      <documentation>Последняя дата публикации курсов валют(ежемесячные валюты) - строка</documentation>
+      <input message="s0:GetLatestDateSoapIn" />
+      <output message="s0:GetLatestDateSoapOut" />
+    </operation>
+    <operation name="GetLatestDateTimeSeld">
+      <documentation>Последняя дата публикации курсов валют как DateTime (ежемесячные валюты)</documentation>
+      <input message="s0:GetLatestDateTimeSeldSoapIn" />
+      <output message="s0:GetLatestDateTimeSeldSoapOut" />
+    </operation>
+    <operation name="GetLatestDateSeld">
+      <documentation>Последняя дата публикации курсов валют (ежемесячные валюты) - строка</documentation>
+      <input message="s0:GetLatestDateSeldSoapIn" />
+      <output message="s0:GetLatestDateSeldSoapOut" />
+    </operation>
+    <operation name="EnumValutesXML">
+      <documentation>Справочник по кодам валют (как XMLDocument)</documentation>
+      <input message="s0:EnumValutesXMLSoapIn" />
+      <output message="s0:EnumValutesXMLSoapOut" />
+    </operation>
+    <operation name="EnumValutes">
+      <documentation>Справочник по кодам валют (как DataSet)</documentation>
+      <input message="s0:EnumValutesSoapIn" />
+      <output message="s0:EnumValutesSoapOut" />
+    </operation>
+    <operation name="GetCursDynamicXML">
+      <documentation>Получение динамики ежедневных курсов валюты (как XMLDocument)</documentation>
+      <input message="s0:GetCursDynamicXMLSoapIn" />
+      <output message="s0:GetCursDynamicXMLSoapOut" />
+    </operation>
+    <operation name="GetCursDynamic">
+      <documentation>Получение динамики ежедневных курсов валюты (как DataSet)</documentation>
+      <input message="s0:GetCursDynamicSoapIn" />
+      <output message="s0:GetCursDynamicSoapOut" />
+    </operation>
+    <operation name="GetCursOnDateXML">
+      <documentation>Получение ежедневных курсов валют (как XMLDocument)</documentation>
+      <input message="s0:GetCursOnDateXMLSoapIn" />
+      <output message="s0:GetCursOnDateXMLSoapOut" />
+    </operation>
+    <operation name="GetSeldCursOnDateXML">
+      <documentation>Получение ежемесячных курсов валют (как XMLDocument)</documentation>
+      <input message="s0:GetSeldCursOnDateXMLSoapIn" />
+      <output message="s0:GetSeldCursOnDateXMLSoapOut" />
+    </operation>
+    <operation name="GetSeldCursOnDate">
+      <documentation>Получение ежемесячных курсов валют (как DataSet)</documentation>
+      <input message="s0:GetSeldCursOnDateSoapIn" />
+      <output message="s0:GetSeldCursOnDateSoapOut" />
+    </operation>
+    <operation name="GetCursOnDate">
+      <documentation>Получение ежедневных курсов валют (как DataSet)</documentation>
+      <input message="s0:GetCursOnDateSoapIn" />
+      <output message="s0:GetCursOnDateSoapOut" />
+    </operation>
+  </portType>
+  <binding name="DailyInfoSoap" type="s0:DailyInfoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="NewsInfoXML">
+      <soap:operation soapAction="http://web.cbr.ru/NewsInfoXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="OmodInfoXML">
+      <soap:operation soapAction="http://web.cbr.ru/OmodInfoXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="XVolXML">
+      <soap:operation soapAction="http://web.cbr.ru/XVolXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MainInfoXML">
+      <soap:operation soapAction="http://web.cbr.ru/MainInfoXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="NewsInfo">
+      <soap:operation soapAction="http://web.cbr.ru/NewsInfo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SwapDynamicXML">
+      <soap:operation soapAction="http://web.cbr.ru/SwapDynamicXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SwapDynamic">
+      <soap:operation soapAction="http://web.cbr.ru/SwapDynamic" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DepoDynamicXML">
+      <soap:operation soapAction="http://web.cbr.ru/DepoDynamicXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DepoDynamic">
+      <soap:operation soapAction="http://web.cbr.ru/DepoDynamic" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="OstatDynamicXML">
+      <soap:operation soapAction="http://web.cbr.ru/OstatDynamicXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="OstatDynamic">
+      <soap:operation soapAction="http://web.cbr.ru/OstatDynamic" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DragMetDynamicXML">
+      <soap:operation soapAction="http://web.cbr.ru/DragMetDynamicXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DragMetDynamic">
+      <soap:operation soapAction="http://web.cbr.ru/DragMetDynamic" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLatestDateTime">
+      <soap:operation soapAction="http://web.cbr.ru/GetLatestDateTime" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLatestDate">
+      <soap:operation soapAction="http://web.cbr.ru/GetLatestDate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLatestDateTimeSeld">
+      <soap:operation soapAction="http://web.cbr.ru/GetLatestDateTimeSeld" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLatestDateSeld">
+      <soap:operation soapAction="http://web.cbr.ru/GetLatestDateSeld" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnumValutesXML">
+      <soap:operation soapAction="http://web.cbr.ru/EnumValutesXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnumValutes">
+      <soap:operation soapAction="http://web.cbr.ru/EnumValutes" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCursDynamicXML">
+      <soap:operation soapAction="http://web.cbr.ru/GetCursDynamicXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCursDynamic">
+      <soap:operation soapAction="http://web.cbr.ru/GetCursDynamic" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCursOnDateXML">
+      <soap:operation soapAction="http://web.cbr.ru/GetCursOnDateXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetSeldCursOnDateXML">
+      <soap:operation soapAction="http://web.cbr.ru/GetSeldCursOnDateXML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetSeldCursOnDate">
+      <soap:operation soapAction="http://web.cbr.ru/GetSeldCursOnDate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCursOnDate">
+      <soap:operation soapAction="http://web.cbr.ru/GetCursOnDate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DailyInfo">
+    <documentation>Веб сервис для получения ежедневных данных ver 2007.02.27</documentation>
+    <port name="DailyInfoSoap" binding="s0:DailyInfoSoap">
+      <soap:address location="http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx" />
+    </port>
+  </service>
+</definitions>
